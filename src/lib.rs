@@ -1,10 +1,6 @@
 use std::iter::FromIterator;
 
-fn main() {
-    println!("{}", to_morse("abcdefghijklmnopqrstuvwxyz "));
-}
-
-fn to_morse(input: &str) -> String {
+pub fn to_morse(input: &str) -> String {
     let data: Vec<String> = input.chars()
         .map(|x| match x {
             ' ' => String::from("....... "),
